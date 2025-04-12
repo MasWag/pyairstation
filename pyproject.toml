@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyairstation"
+version = "0.0.1"
+description = "API for BUFFALO AirStation"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    {name = "Masaki Waga", email = "masakiwaga@gmail.com"}
+]
+maintainers = [
+    {name = "Masaki Waga", email = "masakiwaga@gmail.com"}
+]
+keywords = ["buffalo", "airstation", "router"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+    "Topic :: System :: Networking",
+]
+
+dependencies = [
+    "playwright",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/MasWag/pyairstation"
+"Bug Tracker" = "https://github.com/MasWag/pyairstation/issues"
+"Source Code" = "https://github.com/MasWag/pyairstation"
+
+[tool.setuptools]
+packages = ["pyairstation"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39", "py310", "py311", "py312", "py313"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[project.optional-dependencies]
+development = [
+    "python-lsp-server",
+    "black",
+    "isort",
+    "pytest",
+]
+
+[project.scripts]
+pyairstation = "pyairstation.cli:main"

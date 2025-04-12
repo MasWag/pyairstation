@@ -1,0 +1,9 @@
+default namespace = ""
+
+start = element hosts {
+  element host {
+    attribute hostname { text },
+    attribute skip_dhcp { "true" }?,
+    ( element ip { text } & element mac { text } )
+  }+
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hosts>
+  <host hostname="router" skip_dhcp="true">
+    <mac>00:1A:2B:3C:4D:5E</mac>
+    <ip>192.168.11.1</ip>
+  </host>
+    <host hostname="http">
+    <ip>192.168.11.2</ip>
+    <mac>1A:2B:3C:4D:5E:6F</mac>
+  </host>
+</hosts>
